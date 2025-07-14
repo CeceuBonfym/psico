@@ -191,3 +191,97 @@
         });
     </script>
 </body>
+textarea {
+        resize: vertical;
+        min-height: 80px;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        font-family: Arial, sans-serif;
+    }
+
+    .checkbox-group label, .radio-group label {
+        margin-right: 1rem;
+        font-size: 16px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .section {
+        margin-bottom: 2rem;
+        page-break-inside: avoid;
+    }
+
+    .question {
+        margin-bottom: 1.5rem;
+    }
+
+    h1, h2 {
+        color: #2d3748;
+        page-break-after: avoid;
+    }
+
+    .form-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .required::after {
+        content: '*';
+        color: #e53e3e;
+        margin-left: 4px;
+    }
+
+    @media print {
+        body {
+            padding: 0;
+            margin: 0;
+            font-size: 11pt;
+            color: #000;
+        }
+
+        .form-container {
+            max-width: 100%;
+            margin: 0;
+        }
+
+        textarea {
+            resize: none;
+            border: none;
+            background: none;
+            width: 100%;
+            height: auto;
+            min-height: 20px;
+            padding: 0;
+            overflow: visible;
+            line-height: 1.4;
+            font-size: 11pt;
+            font-family: Arial, sans-serif;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .section {
+            break-inside: avoid;
+        }
+
+        .no-print {
+            display: none;
+        }
+
+        @page {
+            margin: 0.75in;
+        }
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        .question {
+            margin-bottom: 0.75rem;
+        }
+    }
+</style>
